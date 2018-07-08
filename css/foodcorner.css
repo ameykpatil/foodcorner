@@ -1,0 +1,38 @@
+a 
+{
+	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #FFF;
+}
+a:link 
+{
+	text-decoration: none;
+	color: #FFF;
+}
+a:visited 
+{
+	text-decoration: none;
+	color: #FFF;
+}
+a:hover 
+{
+	text-decoration: none;
+	color:#FF0;
+}
+a:active 
+{
+	text-decoration: none;
+	color: #F00;
+}
+body
+{
+	font-family: Trebuchet MS, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+p
+{
+	font-size:16px;
+}
+
+
