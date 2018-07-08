@@ -1,0 +1,192 @@
+<html>
+	<head>
+		<link href="css/foodcorner.css" rel="stylesheet" type="text/css">
+		<script language="javascript">
+			function validate(frm)
+			{
+				if(document.frm.first.value==null||document.frm.first.value==""||document.frm.first.value==" ")
+				{
+					alert("Enter your First Name");
+					document.frm.first.focus();
+					return false;
+				}
+				if(document.frm.last.value==null||document.frm.last.value==""||document.frm.last.value==" ")
+				{
+					alert("Enter your Last Name");
+					document.frm.last.focus();
+					return false;
+				}
+				if(document.frm.gender[0].checked==false && document.frm.gender[1].checked==false)
+				{
+					alert("Please select your sex");
+					return false;
+				}		
+				if(document.frm.usr.value==null||document.frm.usr.value==""||document.frm.usr.value==" ")
+				{
+					alert("Username is Empty");
+					document.frm.usr.focus();
+					return false;
+				}
+				if(document.frm.pass.value==null||document.frm.pass.value==""||document.frm.pass.value==" ")
+				{	
+					alert("Password is Empty");
+					document.frm.pass.focus();
+					return false;
+				}
+				if(document.frm.pass.value!=document.frm.conpass.value)
+				{
+					alert("Confirm Password and Password have Different Values");
+					document.frm.conpass.focus();
+					return false;
+				}
+				if(document.frm.add1.value==null||document.frm.add1.value==""||document.frm.add1.value==" ")
+				{
+					alert("Address 1 field is Empty");
+					document.frm.add1.focus();
+					return false;
+				}
+				if(document.frm.city.value==null||document.frm.city.value==""||document.frm.city.value==" ")
+				{
+					alert("Please enter your city name");
+					document.frm.city.focus();
+					return false;
+				}
+				if(document.frm.pin.value==null||document.frm.pin.value==""||document.frm.pin.value==" ")
+				{
+					alert("Please enter your pincode");
+					document.frm.pin.focus();
+					return false;
+				}
+				if(isNaN(document.frm.pin.value))
+				{
+					alert("Pincode should be number");
+					document.frm.pin.focus();	
+					return false;
+				}
+				if(document.frm.state.selectedIndex==0)
+				{
+					alert("Please select your State");
+					document.frm.state.focus();
+					return false;
+				}
+				if(document.frm.tel.value==null||document.frm.tel.value==""||document.frm.tel.value==" ")
+				{
+					alert("Enter a Telephone Number");
+					document.frm.tel.focus();
+					return false;
+				}	
+				if(isNaN(document.frm.tel.value))
+				{
+					alert("Telephone Number should be number");
+					document.frm.tel.focus();	
+					return false;
+				}
+				if(document.frm.email.value==null||document.frm.email.value==""||document.frm.email.value==" ")
+				{
+					alert("Enter an Email Address");
+					document.frm.email.focus();
+					return false;
+				}	
+				if((document.frm.email.value.indexOf('@') || document.frm.email.value.indexOf('.')) == -1)
+				{
+					alert("Invalid Email");
+					document.frm.email.focus();	
+					return false;
+				}
+				if(document.frm.occ.selectedIndex==0)
+				{
+					alert("Please select your Occupation");
+					document.frm.occ.focus();
+					return false;
+				}
+				if(document.frm.mcd.checked==false && document.frm.domi.checked==false && document.frm.ph.checked==false && document.frm.kfc.checked==false)
+				{
+					alert("Please Tick atleast 1 Favourite Joint");
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<center>
+		<body>
+			<form name="frm" method="post" action="success.asp">
+				<fieldset>
+                	<legend><b>Personal Details</b></legend>
+						<input type="text" size="30" maxlength="25" name="first" value="Enter your First Name" onClick="this.value='';"><br>
+						<input type="text" size="30" maxlength="25" name="last" value="Enter your Last Name" onClick="this.value='';"><br>
+						<input type="radio" name="gender" value="male">male<input type="radio" name="gender" value="female">female<br>
+    					<select name="occ">
+                            <option value="Occupation" selected>Select Occupation</option>
+                            <option value="Student">Student</option>
+                            <option value="Public Sector">Public Sector</option>
+                            <option value="Sales Executive">Sales Executive</option>
+                            <option value="Private Sector">Private Sector</option>
+                            <option value="Prof">Professor/Teacher</option>
+						</select>
+				</fieldset>
+				<fieldset>
+                	<legend><b>Log IN Details</b></legend>
+	                    <input type="text" size="30" maxlength="25" name="usr" value="Enter your Username" onClick="this.value='';"><br>
+    	                <input type="text" size="30" maxlength="25" name="pass" value="Enter your Password" onClick="this.value='';"><br>
+        	            <input type="text" size="30" maxlength="25" name="conpass" value="Retype your Password" onClick="this.value='';"><br>
+    			</fieldset>
+				<fieldset>
+                	<legend><b>Delivery Details</b></legend>
+						<input name="add1" type="text" id="add1" size="40" maxlength="50" value="Enter Street" onClick="this.value='';"><br>
+                        <input name="add2" type="text" id="add2" size="40" maxlength="50" value="Enter Area" onClick="this.value='';"><br>
+                        <input name="city" type="text" id="city" size="40" maxlength="50" value="Enter City" onClick="this.value='';"><br>
+                        <input name="pin" type="text" id="pin" size="25" maxlength="15" value="Enter Pincode" onClick="this.value='';"><br>
+                        <select name="state">
+                        	<option value="default" selected>Select State</option>
+    						<option value="Andaman & Nicobar Islands">Andaman and Nicobar Islands</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                            <option value="Daman & Diu">Daman and Diu</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Lakshadweep">Lakshadweep</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Manipur">Manipur</option>
+                            <option value="Meghalaya">Meghalaya</option>
+                            <option value="Mizoram">Mizoram</option>
+                            <option value="Nagaland">Nagaland</option>
+                            <option value="Orissa">Orissa</option>
+                            <option value="Pondicherry">Pondicherry</option>
+                            <option value="Punjab">Punjab</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Sikkim">Sikkim</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttaranchal">Uttaranchal</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="West Bengal">West Bengal</option>
+                     	</select><br>
+						<input type="text" size="40" maxlength="25" name="tel" value="Enter Telephone Number" onClick="this.value='';"><br>
+						<input type="text" size="40" maxlength="40" name="email" value="Enter email ID" onClick="this.value='';"><br>
+				</fieldset>
+				<fieldset>
+                   	<legend><b>Favourite Food Joints</b></legend>
+						<input type="checkbox" name="mcd">McDonald's
+    					<input type="checkbox" name="domi">Dominos Pizza
+    					<input type="checkbox" name="br">Baskin Robbins
+    					<input type="checkbox" name="kfc">KFC<br>
+				</fieldset>
+				<input type="submit" name="SUBMIT" id="SUBMIT" value="SUBMIT" onClick="return validate(this)">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="reset" name="RESET" id="RESET" value="RESET">
+			</form>
+		</body>
+	</center>
+</html>

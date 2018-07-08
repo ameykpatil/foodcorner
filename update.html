@@ -1,0 +1,110 @@
+<html>
+<head>
+   	<title>Edit Details</title>
+        <link rel="stylesheet" type="text/css" href="css/foodcorner.css" />
+        <script language="javascript">
+function validate(pass)
+{
+	if(document.pass.oldpass.value==null||document.pass.oldpass.value==""||document.pass.oldpass.value==" ")
+	{	
+	alert("Please Enter Old Password");
+	document.pass.oldpass.focus();
+	return false;
+	}
+	if(document.pass.oldpass.value!=document.pass.oldconpass.value)
+	{
+	alert("Please ReType Old Password Correctly");
+	document.pass.oldconpass.focus();
+	return false;
+	}
+	if(document.pass.newpass.value==null||document.pass.newpass.value==""||document.pass.newpass.value==" ")
+	{	
+	alert("Please Enter New Password");
+	document.pass.newpass.focus();
+	return false;
+	}
+	if(document.pass.newpass.value!=document.pass.newconpass.value)
+	{
+	alert("Please ReType New Password Correctly");
+	document.pass.newconpass.focus();
+	return false;
+	}
+}
+</script>
+<style type="text/css">
+<!--
+#apDiv1 {
+	position:absolute;
+	width:417px;
+	height:283px;
+	z-index:1;
+	left: 212px;
+	top: 152px;
+}
+#apDiv2 {
+	position:absolute;
+	width:200px;
+	height:462px;
+	z-index:2;
+	left: 672px;
+	top: 141px;
+}
+-->
+</style>
+</head>
+    <body>
+    	<center><img src="images/header.png"></center>
+    <table width="750" border="5" cellpadding="0" cellspacing="0" align="center">
+        	<tr>
+               	<td align="center" bgcolor="#000000"><a href="home.asp" target="_parent">HOMEPAGE</a></td>
+				<td align="center" bgcolor="#000000"><a href="mytray.asp" target="_parent">MY TRAY</a></td>
+               	<td align="center" bgcolor="#000000"><a href="myacc.asp" target="_parent"><font color="#FF0000">MY ACCOUNT</font></a></td>
+               	<td align="center" bgcolor="#000000"><a href="aboutus.html" target="_parent">ABOUT US</a></td>
+               	<td align="center" bgcolor="#000000"><a href="logout.asp" target="_parent">LOGOUT</a></td>
+            </tr>
+    </table>
+    <div id="apDiv1"><form action="update.asp">
+<table width="397" height="293" border="5" cellpadding="5" cellspacing="5">
+     									<tr>
+											<td width="132"><b><font size="+1" face="Trebuchet MS, Arial, Helvetica, sans-serif"> NAME</font></b></td>
+                                            <td width="164">
+                                            	First Name<input type="text" name="first" size="25" /><br />
+                                                Last Name<input type="text" name="last" size="25" /><br />
+                                           
+                                            </td>
+										</tr>
+                                        <tr>
+											<td width="132"><b><font size="+1">PASSWORD</font></b></td>
+                                            <td width="164">
+                                            	Current Password<input type="text" name="oldpass" size="25" /><br />
+                                            	New Password<input type="text" name="newpass" size="25" /><br />
+                                                Confirm Password<input type="text" name="newconpass" size="25" /><br />
+                                            </td>
+										</tr>
+										<tr>
+  											<td><b><font size="+1">ADDRESS</font></b></td>
+                                            <td>Street<input type="text" name="add1" size="25" maxlength="60"/><br>
+                                            	Area<input type="text" name="add2" size="25" maxlength="60"/><br>
+                                                City<input type="text" name="city" size="25" maxlength="60"/><br>
+                                                Pincode<input type="text" name="pin" size="25" maxlength="60"/><br>
+                                                State<input type="text" name="state" size="25" maxlength="60"/><br>
+                                            </td>
+										</tr>
+										<tr>
+											<td><b><font size="+1">CONTACT</font></b></td>
+                                            <td><input type="text" name="tel" size="25" /></td>
+										</tr>
+                                        <tr>
+											<td><b><font size="+1">EMAIL ID</font></b></td>
+                                            <td><input type="text" name="email" size="25" /></td>
+										</tr>
+                                        <tr>
+                                        	<td align="center" bgcolor="#000000"><font color="#FFFFFF"><a href="javascript:history.back();">BACK</a></font></td>
+                                            <td align="center" bgcolor="#000000"><font color="#FFFFFF"><a href="return validate(this)">SAVE CHANGES</a></font></td>
+                                        </tr>
+                               	</table></form>
+</div>
+    <div id="apDiv2"><img src="images/3d human 6.jpg" width="300" height="300" /><br>
+    <img src="images/tray1.jpg"></div>
+</body>
+        </html>

@@ -1,0 +1,130 @@
+<html>
+	<head>	
+		<title>Credit Card</title>
+			<link href="css/foodcorner.css" rel="stylesheet" type="text/css" />
+			<script language="javascript">
+				function validate(credit)
+				{
+					if(document.credit.first.value==null||document.credit.first.value==""||document.credit.first.value==" ")
+					{
+						alert("Enter your First Name");
+						document.credit.first.focus();
+						return false;
+					}
+			
+					if(document.credit.last.value==null||document.credit.last.value==""||document.credit.last.value==" ")
+					{
+						alert("Enter your Last Name");
+						document.credit.last.focus();
+						return false;
+					}
+		
+					if(document.credit.card.selectedIndex==0)
+					{
+						alert("Please select your Credit Card Type");
+						document.credit.card.focus();
+						return false;
+					}
+					
+					if(document.credit.num.value==null||document.credit.num.value==""||document.credit.num.value==" ")
+					{	
+						alert("Enter Credit Card Number");
+						document.credit.num.focus();
+						return false;
+					}
+		
+					if(isNaN(document.credit.num.value))
+					{
+						alert("Credit Card Number should be number");
+						document.credit.num.focus();	
+						return false;
+					}
+				}
+			</script>	
+	
+    <style type="text/css">
+<!--
+#apDiv1 {
+	position:absolute;
+	width:365px;
+	height:239px;
+	z-index:1;
+	left: 210px;
+	top: 165px;
+}
+#apDiv2 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:2;
+	left: 634px;
+	top: 161px;
+}
+-->
+    </style>
+	</head>
+	
+    <center>
+	<body>
+    
+    
+    
+    <img src="images/header.png">
+        	<table width="750" border="5" cellpadding="0" cellspacing="0">
+        		<tr>
+                	<td align="center" bgcolor="#000000"><a href="home.asp" target="_parent">HOMEPAGE</a></td>
+					<td align="center" bgcolor="#000000"><a href="mytray.asp" target="_parent"><font color="#FF0000">MY TRAY</font></a></td>
+                 	<td align="center" bgcolor="#000000"><a href="myacc.asp" target="_parent">MY ACCOUNT</a></td>
+                   	<td align="center" bgcolor="#000000"><a href="aboutus.html" target="_parent">ABOUT US</a></td>
+                   	<td align="center" bgcolor="#000000"><a href="logout.asp" target="_parent">LOGOUT</a></td>
+                </tr>
+        	</table>
+    		<br />
+			
+      		<div id="apDiv1"><form name="credit" method="post">
+	  <fieldset>
+					<legend><b>Credit Card Details</b></legend>
+					<input type="text" size="30" maxlength="25" name="first" value="Enter First Name" onClick="this.value='';">
+                    <br>
+					<input type="text" size="30" maxlength="25" name="last" value="Enter Last Name" onClick="this.value='';">
+                    <br>
+        			<select name="card">
+      					<option value="default" selected>Credit Card</option>
+	    				<option value="AMER">American Express</option>
+    					<option value="VISA">Visa</option>
+      					<option value="MAESTRO">Maestro</option>
+      					<option value="MASTER">Master Card</option>
+    				</select>
+                    <br>
+       				<input type="num" size="30" maxlength="25" name="num" value="Enter Credit Card Number" onClick="this.value='';">
+	</fieldset>
+	</form>
+<table>
+				<tr>
+  					<td colspan="2" align="center">
+                    	<table border="5" cellspacing="0" cellpadding="0">
+                        	<tr>
+                            	<td bgcolor="#000000" width="100" height="15" align="center">
+                                	<a href="thankyou.asp" target="_parent" onClick="return validate(this)">CONFIRM</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+  					<td align="center">
+                    	<table border="5" cellspacing="0" cellpadding="0">
+                        	<tr>
+                            	<td bgcolor="#000000" width="100" height="15" align="center">
+                                	<a href="javascript:history.back()">BACK</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+  				</tr>
+			</table></div>
+      		<div id="apDiv2"><img src="images/3d human 8.jpg" width="300" height="250"></div>
+
+			
+                              
+	  </body>
+	</center>
+</html>

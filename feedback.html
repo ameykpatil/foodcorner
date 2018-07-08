@@ -1,0 +1,55 @@
+<html>
+<head>
+   	<title>Feedback</title>
+        <link rel="stylesheet" type="text/css" href="css/foodcorner.css" />
+<style type="text/css">
+<!--
+#apDiv1 {
+	position:absolute;
+	width:200px;
+	height:446px;
+	z-index:1;
+	left: 675px;
+	top: 176px;
+}
+#apDiv2 {
+	position:absolute;
+	width:432px;
+	height:368px;
+	z-index:2;
+	left: 211px;
+	top: 173px;
+}
+-->
+</style>
+	</head>
+    <body>
+    	<center><img src="images/header.png"></center>
+    <table width="750" border="5" cellpadding="0" cellspacing="0" align="center">
+        	<tr>
+               	<td align="center" bgcolor="#000000"><a href="home.asp" target="_parent">HOMEPAGE</a></td>
+				<td align="center" bgcolor="#000000"><a href="mytray.asp" target="_parent">MY TRAY</a></td>
+               	<td align="center" bgcolor="#000000"><a href="myacc.asp" target="_parent"><font color="#FF0000">MY ACCOUNT</font></a></td>
+               	<td align="center" bgcolor="#000000"><a href="aboutus.html" target="_parent">ABOUT US</a></td>
+               	<td align="center" bgcolor="#000000"><a href="logout.asp" target="_parent">LOGOUT</a></td>
+            </tr>
+        </table>
+        
+    <div id="apDiv1"><img src="images/3d human 4.jpg" width="300" height="300" /><br>
+    <img src="images/tray2.jpg" width="264" height="161"></div>
+    <div id="apDiv2">
+    <table border="5" cellpadding="5" cellspacing="5">
+    <form action="MAILTO:feedback@foodcorner.com" method="post" enctype="text/plain">
+    <tr><td><b><font size="+1">Name</font></b><br />
+    <input type="text" name="name" size="25" /></td></tr>
+    <tr><td><b><font size="+1">Email ID</font></b><br />
+	<input type="text" name="email" size="25" /></td></tr>
+    <tr><td><b><font size="+1">Subject</font></b><br />
+    <input type="text" name="subject" size="25" /></td></tr>
+    <tr><td><b><font size="+1">Message</font></b><br />     
+    <textarea rows="10" cols="50"></textarea><br /><br />
+    <input type="submit" value="SEND" /></td></tr>
+    </form></table>
+    </div>
+</body>
+</html>
